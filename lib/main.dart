@@ -41,7 +41,7 @@ class _MainAppState extends State<MainApp> {
                       height: 10,
                       thickness: 3,
                     ),
-                    CurNutrition(),
+                    CurNutrition(number: '452'),
                     SizedBox(height: 20),
                     ListNutrition(name: 'Fried Eggs', volume: '100g'),
                     ListNutrition(name: 'Muf of coffee', volume: '450ml'),

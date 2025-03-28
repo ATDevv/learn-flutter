@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/info_nutri.dart';
 
 class CurNutrition extends StatelessWidget {
-  const CurNutrition({super.key});
+  const CurNutrition({super.key, required this.number});
+
+  final String number;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class CurNutrition extends StatelessWidget {
               textBaseline: TextBaseline.alphabetic,
               children: [
                 Text(
-                  '452',
+                  number,
                   style: TextStyle(
                     fontSize: 45,
                     fontWeight: FontWeight.w500,
