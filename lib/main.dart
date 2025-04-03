@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic/list_nutrition.dart';
-import 'meal.dart';
-import 'app_bar_food.dart';
-import 'cur_nutrition.dart';
+import 'package:flutter_basic/ace.dart';
+import 'package:flutter_basic/frieza_horizontal.dart';
+import 'package:flutter_basic/gojo.dart';
+import 'package:flutter_basic/toji.dart';
+import 'package:flutter_basic/viruss.dart';
 
 void main() {
   runApp(const MainApp());
@@ -22,37 +23,20 @@ class _MainAppState extends State<MainApp> {
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Scaffold(
-            appBar: AppBar(
-              title: AppBarFood(),
-              backgroundColor: Colors.white,
-              toolbarHeight: 80,
-            ),
-            body: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 0),
-                child: Column(
-                  children: [
-                    Meal(),
-                    SizedBox(height: 20),
-                    Divider(
-                      height: 10,
-                      thickness: 3,
-                    ),
-                    CurNutrition(number: '452'),
-                    SizedBox(height: 20),
-                    ListNutrition(name: 'Fried Eggs', volume: '100g'),
-                    ListNutrition(name: 'Muf of coffee', volume: '450ml'),
-                    ListNutrition(name: 'Fried Eggs', volume: '100g'),
-                    ListNutrition(name: 'Muf of coffee', volume: '450ml'),
-                    ListNutrition(name: 'Fried Eggs', volume: '100g'),
-                    ListNutrition(name: 'Muf of coffee', volume: '450ml'),
-                    ListNutrition(name: 'Fried Eggs', volume: '100g'),
-                    ListNutrition(name: 'Muf of coffee', volume: '450ml'),
-                  ],
-                ),
+        child: Scaffold(
+          body: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Gojo(),
+                  FriezaHorizontal(),
+                  Ace(),
+                  Toji(),
+                  Viruss()
+                ],
               ),
             ),
           ),
